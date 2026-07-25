@@ -1,0 +1,19 @@
+{
+	"name": "Калькулятор трудомісткості розробки ПЗ",
+	"short_name": "Лаб. калькулятор",
+	"description": "COCOMO II, метод функціональних точок та інші метрики програмної інженерії.",
+	"start_url": "/Lab-system/",
+	"scope": "/Lab-system/",
+	"display": "standalone",
+	"background_color": "#0f172a",
+	"theme_color": "#0f172a",
+	"lang": "uk",
+	"icons": [
+		{
+			"src": "/Lab-system/vite.svg",
+			"sizes": "any",
+			"type": "image/svg+xml",
+			"purpose": "any"
+		}
+	]
+}

@@ -1,0 +1,2 @@
+const c={organic:{a:2.4,b:1.05,c:2.5,d:.38},semidetached:{a:3,b:1.12,c:2.5,d:.35},embedded:{a:2.8,b:1.2,c:2.5,d:.32}},s=["prec","flex","resl","team","pmat"],t=["rely","data","cplx","ruse","docu","time","stor","pvol","acap","pcap","pcon","apex","plex","ltex","tool","site","sced"];function o(){return t.reduce((e,a)=>(e[a]=1,e),{})}export{c as C,s as a,t as b,o as n};
+//# sourceMappingURL=cocomo-BrgMWfQU.js.map

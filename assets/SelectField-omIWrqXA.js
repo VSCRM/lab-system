@@ -1,0 +1,2 @@
+import{r as n,j as e}from"./index-Dj57wnYL.js";function x({label:i,value:r,onChange:c,options:d,hint:s}){const a=n.useId();return e.jsxs("div",{children:[e.jsx("label",{htmlFor:a,className:"field-label",children:i}),e.jsx("select",{id:a,value:r,onChange:c,className:"field-input",children:d.map(l=>e.jsx("option",{value:l.value,children:l.label},l.value))}),s&&e.jsx("p",{className:"field-hint",children:s})]})}export{x as S};
+//# sourceMappingURL=SelectField-omIWrqXA.js.map

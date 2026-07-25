@@ -1,0 +1,2 @@
+import{j as e}from"./index-Dj57wnYL.js";function a({label:s,value:x,unit:t,highlight:l=!1}){return e.jsxs("div",{className:"bg-slate-900/50 rounded-lg p-4 text-center border border-white/5",children:[e.jsx("div",{className:"text-[11px] sm:text-xs text-blue-300 mb-1 uppercase tracking-wide",children:s}),e.jsx("div",{className:`text-xl sm:text-2xl font-bold ${l?"text-yellow-400":"text-white"}`,children:x}),t&&e.jsx("div",{className:"text-[11px] sm:text-xs text-slate-400 mt-0.5",children:t})]})}export{a as R};
+//# sourceMappingURL=ResultStat-C6w1PsZR.js.map
