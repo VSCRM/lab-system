@@ -1,0 +1,51 @@
+{
+	"header": {
+		"title": "Lab Exercise #1",
+		"subtitle": "Software product development effort estimation"
+	},
+	"classifiers": {
+		"stepTitle": "Step 1: Base classifiers",
+		"k1Label": "K1 - Scale of the automation object",
+		"k2Label": "K2 - Customer type",
+		"k3Label": "K3 - Software type",
+		"rangeHint": "Range: 1-15",
+		"kpLabel": "KP - Programming language coefficient",
+		"kpHint": "C++ = 53, Python = 21, Java = 53"
+	},
+	"sizeSteps": {
+		"functionalSizeTitle": "Step 2: Functional size (FR)",
+		"functionalSizeFormula": "FR = (K1 + K2 + K3)^2.35",
+		"functionalSizeResult": "FR ≈ {{fr}} points",
+		"functionalSizeStep": "FR = ({{k1}} + {{k2}} + {{k3}})^2.35 = {{sum}}^2.35",
+		"codeVolumeTitle": "Step 3: Code volume (RK)",
+		"codeVolumeFormula": "RK = FR × KP / 1000",
+		"codeVolumeResult": "RK ≈ {{rk}} KLOC",
+		"codeVolumeStep": "RK = {{fr}} × {{kp}} / 1000"
+	},
+	"ratings": {
+		"stepTitle": "Step 4: Development ratings (R1-R5)",
+		"r1": "R1 - Predictability",
+		"r2": "R2 - Process flexibility",
+		"r3": "R3 - Risk resolution",
+		"r4": "R4 - Team cohesion",
+		"r5": "R5 - Process maturity",
+		"exponentFormula": "E = 0.91 + 0.01 × ΣRi",
+		"exponentResult": "E = {{e}}",
+		"sumStep": "ΣRi = {{sum}}"
+	},
+	"costFactor": {
+		"stepTitle": "Step 5: Cost factor (Z)",
+		"zLabel": "Z - Product of cost multipliers (Z1 × Z2 × ... × Z7)",
+		"zHint": "Nominal level for all factors = 1.0"
+	},
+	"result": {
+		"title": "Total Effort",
+		"formula": "T = 2.94 × (RK)^E × Z",
+		"result": "T ≈ {{t}} person-months",
+		"step": "T = 2.94 × ({{rk}})^{{e}} × {{z}}",
+		"statCodeVolume": "Code volume",
+		"statGrowthRate": "Growth exponent",
+		"statLabor": "Effort",
+		"unitPersonMonths": "PM"
+	}
+}

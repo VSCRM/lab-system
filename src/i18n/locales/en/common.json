@@ -1,0 +1,49 @@
+{
+	"appTitle": "Software Effort Estimation Calculator",
+	"appSubtitle": "IFNTUOG • Kruchkevych B.V. • IP-23-1",
+	"skipToContent": "Skip to main content",
+	"backToList": "Back to list",
+	"calculate": "Calculate",
+	"loadingLab": "Loading lab exercise…",
+	"languageSwitcher": {
+		"label": "Language",
+		"uk": "Українська",
+		"en": "English"
+	},
+	"notFound": {
+		"title": "Page not found",
+		"description": "This lab exercise doesn't exist, or the link is outdated.",
+		"homeLink": "Go home"
+	},
+	"errorBoundary": {
+		"title": "Something went wrong",
+		"description": "An unexpected error occurred during calculation. Try updating the field values or going back to the list.",
+		"reset": "Back to list"
+	},
+	"labs": {
+		"trudomistkist": {
+			"title": "Software Development Effort Estimation",
+			"subtitle": "COCOMO II + Function Points"
+		},
+		"chyselnist-vykonavtsiv": {
+			"title": "Required Project Staff Count",
+			"subtitle": "219 working days (2026)"
+		},
+		"cocomo-vartist": {
+			"title": "Cost Estimation via the COCOMO Model",
+			"subtitle": "Basic and Detailed levels"
+		},
+		"funkcionalni-tochky": {
+			"title": "Function Point Analysis",
+			"subtitle": "Data and transaction analysis"
+		},
+		"cocomo-post-architecture": {
+			"title": "Software Cost Estimation Tools",
+			"subtitle": "COCOMO II Post-Architecture"
+		},
+		"rozmir-programnoi-chastyny": {
+			"title": "Software Component Size Estimation",
+			"subtitle": "Equivalent volume and modification"
+		}
+	}
+}

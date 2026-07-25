@@ -1,0 +1,38 @@
+{
+	"header": {
+		"title": "Лабораторна робота №5",
+		"subtitle": "Засоби оцінки вартості ПЗ (COCOMO II Post-Architecture)"
+	},
+	"initialRoles": {
+		"developer": "Програміст",
+		"seniorDeveloper": "Програміст Senior",
+		"analyst": "Аналітик",
+		"manager": "Менеджер",
+		"tester": "Тестувальник"
+	},
+	"volume": {
+		"stepTitle": "Обсяг проекту",
+		"slocLabel": "SLOC - Рядків вихідного коду",
+		"kslocHint": "KSLOC = {{value}}"
+	},
+	"scaleFactorsSection": {
+		"stepTitle": "Фактори масштабу (Scale Factors)"
+	},
+	"costDriversSection": {
+		"stepTitle": "Драйвери витрат (17 параметрів)",
+		"helperText": "💡 Для спрощення, всі драйвери встановлено на номінальний рівень (1.0). Ви можете змінити будь-який з них нижче."
+	},
+	"effort": {
+		"stepTitle": "Трудомісткість проекту",
+		"formula": "Effort = 2.94 × (KSLOC)^E × EAF",
+		"result": "Effort ≈ {{value}} людино-місяців"
+	},
+	"staffSection": {
+		"stepTitle": "Внесок персоналу (Costs Tab)"
+	},
+	"finalSection": {
+		"stepTitle": "Фінальні показники",
+		"rationaleTitle": "Обґрунтування (ЛР №2)",
+		"rationaleText": "Проект обсягом {{sloc}} SLOC потребує {{staffing}} фахівців. Враховуючи вашу команду та графік робочого часу на 2026 рік (219 днів), проект є повністю реалістичним."
+	}
+}

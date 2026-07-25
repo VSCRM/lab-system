@@ -1,0 +1,51 @@
+{
+	"header": {
+		"title": "Лабораторна робота №1",
+		"subtitle": "Розрахунок трудомісткості розробки програмного продукту"
+	},
+	"classifiers": {
+		"stepTitle": "Крок 1: Вихідні класифікатори",
+		"k1Label": "К1 - Масштаб об'єкту автоматизації",
+		"k2Label": "К2 - Тип замовника",
+		"k3Label": "К3 - Тип програмного забезпечення",
+		"rangeHint": "Діапазон: 1-15",
+		"kpLabel": "КП - Коефіцієнт мови програмування",
+		"kpHint": "C++ = 53, Python = 21, Java = 53"
+	},
+	"sizeSteps": {
+		"functionalSizeTitle": "Крок 2: Функціональний розмір (ФР)",
+		"functionalSizeFormula": "ФР = (К1 + К2 + К3)^2.35",
+		"functionalSizeResult": "ФР ≈ {{fr}} балів",
+		"functionalSizeStep": "ФР = ({{k1}} + {{k2}} + {{k3}})^2.35 = {{sum}}^2.35",
+		"codeVolumeTitle": "Крок 3: Розмір коду (РК)",
+		"codeVolumeFormula": "РК = ФР × КП / 1000",
+		"codeVolumeResult": "РК ≈ {{rk}} KLOC",
+		"codeVolumeStep": "РК = {{fr}} × {{kp}} / 1000"
+	},
+	"ratings": {
+		"stepTitle": "Крок 4: Показники розробки (R₁ - R₅)",
+		"r1": "R₁ - Передбачуваність",
+		"r2": "R₂ - Гнучкість процесу",
+		"r3": "R₃ - Знищення ризиків",
+		"r4": "R₄ - Згуртованість команди",
+		"r5": "R₅ - Зрілість процесів",
+		"exponentFormula": "E = 0.91 + 0.01 × ΣRᵢ",
+		"exponentResult": "E = {{e}}",
+		"sumStep": "ΣRᵢ = {{sum}}"
+	},
+	"costFactor": {
+		"stepTitle": "Крок 5: Показник витрат (Z)",
+		"zLabel": "Z - Добуток множників витрат (Z₁ × Z₂ × ... × Z₇)",
+		"zHint": "Середній рівень для всіх факторів = 1.0"
+	},
+	"result": {
+		"title": "Підсумкова Трудомісткість",
+		"formula": "T = 2.94 × (РК)^E × Z",
+		"result": "T ≈ {{t}} людино-місяців",
+		"step": "T = 2.94 × ({{rk}})^{{e}} × {{z}}",
+		"statCodeVolume": "Обсяг коду",
+		"statGrowthRate": "Ступінь зростання",
+		"statLabor": "Трудомісткість",
+		"unitPersonMonths": "л-м"
+	}
+}

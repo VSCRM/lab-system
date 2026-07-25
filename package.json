@@ -1,0 +1,108 @@
+{
+	"name": "lab-system",
+	"private": true,
+	"version": "2.1.0",
+	"type": "module",
+	"homepage": "https://vscrm.github.io/Lab-system/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/VSCRM/Lab-system.git"
+	},
+	"engines": {
+		"node": "^20.19.0 || >=22.12.0"
+	},
+	"scripts": {
+		"dev": "vite --open",
+		"build": "tsc -b && vite build",
+		"postbuild": "node scripts/copy-404.mjs",
+		"lint": "eslint .",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"typecheck": "tsc -b --noEmit",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"coverage": "vitest run --coverage",
+		"preview": "vite preview --open",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d dist",
+		"audit:check": "npm audit --omit=dev",
+		"size": "npm run build && size-limit"
+	},
+	"size-limit": [
+		{
+			"name": "Entry bundle (react, router, i18next, app shell)",
+			"path": "dist/assets/index-*.js",
+			"limit": "105 KB",
+			"gzip": true
+		},
+		{
+			"name": "Validation bundle (zod schemas)",
+			"path": "dist/assets/schemas-*.js",
+			"limit": "25 KB",
+			"gzip": true
+		},
+		{
+			"name": "Stylesheet",
+			"path": "dist/assets/index-*.css",
+			"limit": "12 KB",
+			"gzip": true
+		},
+		{
+			"name": "Largest lab chunk (Lab4 — AI wizard)",
+			"path": "dist/assets/Lab4-*.js",
+			"limit": "12 KB",
+			"gzip": true
+		},
+		{
+			"name": "Total JS shipped on first load (entry + one lab, worst case)",
+			"path": [
+				"dist/assets/index-*.js",
+				"dist/assets/schemas-*.js"
+			],
+			"limit": "120 KB",
+			"gzip": true
+		}
+	],
+	"overrides": {
+		"minimatch": "^10.2.5"
+	},
+	"dependencies": {
+		"@sentry/react": "^10.66.0",
+		"i18next": "^26.3.6",
+		"i18next-browser-languagedetector": "^8.2.1",
+		"lucide-react": "^1.25.0",
+		"react": "^19.2.8",
+		"react-dom": "^19.2.8",
+		"react-i18next": "^17.0.10",
+		"react-router": "^8.3.0",
+		"zod": "^3.25.76"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.39.5",
+		"@types/node": "^22.10.2",
+		"@types/react": "^19.2.17",
+		"@types/react-dom": "^19.2.3",
+		"@vitejs/plugin-react": "^5.2.0",
+		"autoprefixer": "^10.4.20",
+		"eslint": "^9.39.5",
+		"eslint-plugin-react-hooks": "^5.2.0",
+		"eslint-plugin-react-refresh": "^0.5.3",
+		"eslint-config-prettier": "^10.1.8",
+		"gh-pages": "^6.3.0",
+		"globals": "^15.15.0",
+		"postcss": "^8.5.19",
+		"prettier": "^3.9.5",
+		"tailwindcss": "^3.4.19",
+		"typescript": "^5.9.3",
+		"typescript-eslint": "^8.64.0",
+		"vite": "^7.3.6",
+		"vitest": "^4.1.10",
+		"@vitest/coverage-v8": "^4.1.10",
+		"jsdom": "^29.1.1",
+		"@testing-library/react": "^16.3.2",
+		"@testing-library/jest-dom": "^6.9.1",
+		"@testing-library/user-event": "^14.6.1",
+		"size-limit": "^12.1.0",
+		"@size-limit/file": "^12.1.0"
+	}
+}

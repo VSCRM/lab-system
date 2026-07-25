@@ -1,0 +1,62 @@
+{
+	"header": {
+		"title": "Лабораторна робота №3",
+		"subtitle": "Оцінка вартості розробки програмної системи за моделлю COCOMO"
+	},
+	"modeAndSize": {
+		"stepTitle": "Вибір рівня моделі та режиму",
+		"modeLabel": "Рівень моделі",
+		"modeBasic": "Базовий (Basic)",
+		"modeDetailed": "Деталізований (Detailed)",
+		"regimeLabel": "Режим розробки",
+		"regimeOrganic": "Органічний (Organic)",
+		"regimeSemidetached": "Напіврозділений (Semidetached)",
+		"regimeEmbedded": "Впроваджений (Embedded)",
+		"sizeLabel": "Обсяг проекту (KLOC)",
+		"coefficientsLabel": "Коефіцієнти для режиму «{{regime}}»:"
+	},
+	"costDrivers": {
+		"stepTitle": "Драйвери витрат (Cost Drivers)",
+		"acapLabel": "ACAP - Здібності аналітика",
+		"acapHint": "Високий = 0.86",
+		"pcapLabel": "PCAP - Здібності програміста",
+		"pcapHint": "Дуже високий = 0.70",
+		"lexpLabel": "LEXP - Досвід мови програмування",
+		"lexpHint": "Високий = 0.95",
+		"relyLabel": "RELY - Необхідна надійність",
+		"relyHint": "Номінальний = 1.00",
+		"dataLabel": "DATA - Розмір бази даних",
+		"dataHint": "Номінальний = 1.00",
+		"formula": "EAF = ACAP × PCAP × LEXP × RELY × DATA",
+		"result": "EAF = {{eaf}}",
+		"step": "EAF = {{acap}} × {{pcap}} × {{lexp}} × {{rely}} × {{data}}"
+	},
+	"basicMode": {
+		"stepTitle": "Розрахунок за базовим рівнем",
+		"effortFormula": "1. Трудовитрати (E) = a × (Size)^b",
+		"effortResult": "E ≈ {{value}} людино-місяців",
+		"tdevFormula": "2. Час розробки (TDEV) = c × (E)^d",
+		"tdevResult": "TDEV ≈ {{value}} місяців",
+		"ssFormula": "3. Чисельність персоналу (SS) = E / TDEV",
+		"ssResult": "SS ≈ {{value}} осіб",
+		"pFormula": "4. Продуктивність (P) = Size / E",
+		"pResult": "P ≈ {{value}} KLOC/люд.-міс."
+	},
+	"detailedMode": {
+		"info": "Висока кваліфікація команди (EAF = {{eaf}}) {{direction}} трудовитрати порівняно з номінальними показниками.",
+		"directionDecreases": "зменшує",
+		"directionIncreases": "збільшує"
+	},
+	"results": {
+		"title": "Результати",
+		"resultLabel": "E ≈ {{value}} люд.-міс.",
+		"statEffort": "Трудовитрати",
+		"unitPersonMonths": "людино-місяців",
+		"statDuration": "Час розробки",
+		"unitMonths": "місяців",
+		"statStaff": "Персонал",
+		"unitPeople": "осіб",
+		"statProductivity": "Продуктивність",
+		"unitProductivity": "KLOC/л-м"
+	}
+}

@@ -1,0 +1,78 @@
+{
+	"header": {
+		"title": "Лабораторна робота №6",
+		"subtitle": "Оцінка розміру програмної частини інформаційної системи"
+	},
+	"initialRoles": {
+		"developer": "Програміст",
+		"seniorDeveloper": "Програміст Senior",
+		"analyst": "Аналітик",
+		"manager": "Менеджер",
+		"tester": "Тестувальник"
+	},
+	"volumeStep": {
+		"stepTitle": "Крок 1: Розрахунок обсягу коду (KSLOC)",
+		"designFormsLabel": "Кількість форм для зміни дизайну",
+		"designPercentLabel": "Відсоток зміни (0.0 - 1.0)",
+		"designPercentHint": "20% = 0.20",
+		"newFormsLabel": "Кількість нових форм (макет)",
+		"avgModuleLabel": "Середній модуль (SLOC)",
+		"slocDesignLine": "SLOC_design = {{forms}} × {{avgModule}} × {{percent}} = {{value}} SLOC",
+		"slocNewLine": "SLOC_new = {{forms}} × {{avgModule}} × 1.0 = {{value}} SLOC",
+		"totalSlocLine": "Загальний SLOC = {{slocDesign}} + {{slocNew}} =",
+		"ksloc": "KSLOC = {{value}}"
+	},
+	"modificationStep": {
+		"stepTitle": "Крок 2: Відсотки модифікації (Reuse Parameters)",
+		"slocpLabel": "SLOCP - Логіка",
+		"slociLabel": "SLOCI - Обробка",
+		"slocrLabel": "SLOCR - Інтеграція",
+		"dmLine": "DM = (SLOCP / AvgModule) × 100 = {{value}}%",
+		"cmLine": "CM = (SLOCI / AvgModule) × 100 = {{value}}%",
+		"imLine": "IM = (SLOCR / AvgModule) × 100 = {{value}}%"
+	},
+	"eslocStep": {
+		"stepTitle": "Крок 3: Еквівалентний обсяг (ESLOC)",
+		"aaLabel": "AA - Оцінка (%)",
+		"suLabel": "SU - Розуміння коду (%)",
+		"formula": "ESLOC = AvgModule × (AA + SU + 0.4×DM + 0.3×CM + 0.3×IM) / 100",
+		"esloc": "ESLOC ≈ {{value}} SLOC (на 1 форму)",
+		"totalEsloc": "Загальний ESLOC = {{value}} KSLOC ({{forms}} форм)"
+	},
+	"volumeSummary": {
+		"stepTitle": "Підсумок Кроку 1-3",
+		"totalVolume": "Загальний обсяг",
+		"equivalentVolume": "Еквівалентний обсяг",
+		"modification": "Модифікація",
+		"modificationLabels": "DM / CM / IM"
+	},
+	"effortStep": {
+		"stepTitle": "Крок 6: Трудомісткість проекту",
+		"formula": "Effort = 2.94 × (ESLOC_total)^E × EAF × 0.45",
+		"result": "Effort ≈ {{value}} людино-місяців"
+	},
+	"durationStep": {
+		"stepTitle": "Крок 7: Тривалість проекту",
+		"formula": "TDEV = 3.67 × (Effort)^F, де F = 0.28 + 0.2 × (E - 0.91)",
+		"result": "Тривалість ≈ {{value}} місяців",
+		"step": "F = {{value}}"
+	},
+	"scaleFactorsSection": {
+		"stepTitle": "Крок 4: Фактори масштабу (Scale Factors)"
+	},
+	"costDriversSection": {
+		"stepTitle": "Крок 5: Драйвери витрат (17 параметрів)"
+	},
+	"staffSection": {
+		"stepTitle": "Крок 8: Розподіл персоналу"
+	},
+	"finalSection": {
+		"stepTitle": "Фінальні показники",
+		"summaryTitle": "✓ ЗВЕДЕНІ ДАНІ ПРОЄКТУ",
+		"summaryDesignForms": "• {{count}} форм (зміна дизайну {{percent}}%)",
+		"summaryNewForms": "• {{count}} форм (нові макети 100%)",
+		"summaryAvgModule": "• Середній модуль: {{value}} SLOC",
+		"summaryTotalVolume": "• Загальний обсяг: {{value}} KSLOC",
+		"summaryEquivalentVolume": "• Еквівалентний обсяг: {{value}} KSLOC"
+	}
+}

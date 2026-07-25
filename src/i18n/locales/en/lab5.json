@@ -1,0 +1,38 @@
+{
+	"header": {
+		"title": "Lab Exercise #5",
+		"subtitle": "Software cost estimation tools (COCOMO II Post-Architecture)"
+	},
+	"initialRoles": {
+		"developer": "Developer",
+		"seniorDeveloper": "Senior Developer",
+		"analyst": "Analyst",
+		"manager": "Manager",
+		"tester": "QA Tester"
+	},
+	"volume": {
+		"stepTitle": "Project volume",
+		"slocLabel": "SLOC - Source lines of code",
+		"kslocHint": "KSLOC = {{value}}"
+	},
+	"scaleFactorsSection": {
+		"stepTitle": "Scale Factors"
+	},
+	"costDriversSection": {
+		"stepTitle": "Cost Drivers (17 parameters)",
+		"helperText": "💡 For simplicity, all drivers are set to nominal (1.0). You can change any of them below."
+	},
+	"effort": {
+		"stepTitle": "Project effort",
+		"formula": "Effort = 2.94 × (KSLOC)^E × EAF",
+		"result": "Effort ≈ {{value}} person-months"
+	},
+	"staffSection": {
+		"stepTitle": "Staff contribution (Costs Tab)"
+	},
+	"finalSection": {
+		"stepTitle": "Final metrics",
+		"rationaleTitle": "Rationale (Lab #2)",
+		"rationaleText": "A project of {{sloc}} SLOC requires {{staffing}} specialists. Given your team and the 2026 working-time schedule (219 days), the project is fully realistic."
+	}
+}

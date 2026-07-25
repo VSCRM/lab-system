@@ -1,0 +1,95 @@
+{
+	"header": {
+		"title": "Lab Exercise #4",
+		"subtitle": "Function Point Analysis (FPA)"
+	},
+	"complexityLevel": {
+		"low": "Low",
+		"medium": "Medium",
+		"high": "High"
+	},
+	"steps": {
+		"step1": "Step 1: ILF",
+		"step2": "Step 2: EQ",
+		"step3": "Step 3: Summary"
+	},
+	"prompts": {
+		"ilf": "This is an image of the \"Student\" data object (a table or ER diagram).\nDetermine for ILF:\n- DET: number of unique fields/attributes\n- RET: number of logical subgroups (usually 1)\nReply with ONLY JSON, no extra text:\n{\"det\":0,\"ret\":0,\"explanation\":\"explanation\"}",
+		"eq": "This is an image of a dialog window or form.\nDetermine for EQ:\n- DET: number of interface elements (fields, buttons, checkboxes, labels, lists)\n- FTR: number of logical files/tables (usually 1-3)\nReply with ONLY JSON, no extra text:\n{\"det\":0,\"ftr\":0,\"explanation\":\"explanation\"}"
+	},
+	"ilfStep": {
+		"heading": "Step 1: Analyze figure 1 — the \"Student\" object (ILF)",
+		"description": "Upload an image of the table or ER diagram for the \"Student\" structure",
+		"fileHint": "Upload figure 1",
+		"detLabel": "DET - Data elements",
+		"detHint": "Unique fields (full name, address, phone...)",
+		"retLabel": "RET - Record types",
+		"retHint": "Logical data subgroups",
+		"taskLabel": "Task 1: Internal Logical File (ILF)",
+		"continueLabel": "Next → Step 2: Analyze figure 2 (EQ)"
+	},
+	"eqStep": {
+		"heading": "Step 2: Analyze figure 2 — dialog window (EQ)",
+		"description": "Upload a screenshot of a dialog window or form",
+		"fileHint": "Upload figure 2",
+		"detLabel": "DET - Data elements",
+		"detHint": "Checkboxes, buttons, input fields...",
+		"ftrLabel": "FTR - Files",
+		"ftrHint": "Number of logical files",
+		"taskLabel": "Task 2: External Query (EQ)",
+		"continueLabel": "Combine calculation → Summary"
+	},
+	"changeApiKey": "← Change API key",
+	"apiKeySetup": {
+		"title": "🔑 OpenRouter API Key Setup",
+		"subtitle": "AI image analysis requires a free OpenRouter key.",
+		"securityNote": "The key is sent directly from your browser to OpenRouter and isn't stored anywhere — but that also means anyone with access to your device's network traffic could see it. Don't use keys with a paid limit on public or shared computers.",
+		"howToGetTitle": "How to get a free key:",
+		"step1": "Go to",
+		"step2": "Sign up via Google or GitHub (free)",
+		"step3Before": "Click",
+		"step3CreateKey": "\"Create Key\"",
+		"step3After": "→ copy the key (starts with",
+		"step4Before": "Paste the key below or save it to a",
+		"step4After": "file and upload it",
+		"manualEntryLabel": "Enter key manually",
+		"orUploadLabel": "Or upload a .txt file",
+		"chooseFileButton": "📄 Choose key file",
+		"keyLoaded": "✓ Key loaded",
+		"fileHint": "The file should contain only the key on a single line. The key isn't stored after the page is closed.",
+		"freeModelsLabel": "Free vision models (failover — tried in order):",
+		"continueButton": "Start analysis → Step 1",
+		"continueButtonDisabled": "Enter an API key to continue",
+		"errorFileTooBig": "Key file is too large — expected a short text file.",
+		"errorFileRead": "Failed to read the file.",
+		"errorInvalidFormat": "Invalid key format",
+		"errorNotOpenRouterKey": "This doesn't look like an OpenRouter key — expected the format \"sk-or-v1-...\"."
+	},
+	"analysisStep": {
+		"uploadedImageAlt": "Uploaded image for analysis",
+		"analyzeButton": "Analyze image",
+		"analyzingLabel": "Analyzing...",
+		"tryingModelLabel": "Trying: {{model}}...",
+		"complexityLabel": "Complexity:",
+		"functionPointsLabel": "Function points:"
+	},
+	"summary": {
+		"overviewTitle": "Summary results",
+		"ilfCardTitle": "ILF — \"Student\"",
+		"eqCardTitle": "EQ — Dialog window",
+		"uftTitle": "Function point summary",
+		"uftFormula": "UFT (Unadjusted FP) = ILF + EQ",
+		"uftResult": "UFT = {{uft}} function points",
+		"uftStep": "UFT = {{ilfFp}} + {{eqFp}}",
+		"vafLabel": "VAF - Value Adjustment Factor",
+		"vafHint": "Range: 0.65 - 1.35 (average = 1.0)",
+		"aftTitle": "Adjusted Function Points",
+		"aftFormula": "AFT = UFT × VAF",
+		"aftResult": "AFT = {{aft}} function points",
+		"aftStep": "AFT = {{uft}} × {{vaf}}",
+		"statIlf": "ILF",
+		"statEq": "EQ",
+		"statAft": "Total AFT",
+		"resetButton": "↺ Start over"
+	}
+}

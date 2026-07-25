@@ -1,0 +1,73 @@
+{
+	"header": {
+		"title": "Lab Exercise #2",
+		"subtitle": "Required project staff count estimation"
+	},
+	"functions": {
+		"101": "Data input organization",
+		"102": "Input control and validation",
+		"201": "Database structure generation",
+		"204": "Database record set processing",
+		"208": "Database search organization",
+		"308": "File management",
+		"405": "Software configuration system",
+		"502": "System monitor",
+		"506": "Error handling",
+		"602": "Help and training",
+		"704": "Report processor"
+	},
+	"catalog": {
+		"stepTitle": "Step 1: Software function catalog (Visual C++)",
+		"formula": "V3 = Sum of selected functions",
+		"result": "V3 = {{v3}} LOC (lines of code)",
+		"locSuffix": "LOC",
+		"linesSuffix": "lines"
+	},
+	"normativeLabor": {
+		"stepTitle": "Step 2: Normative labor (Th)",
+		"categoryLabel": "Software complexity category",
+		"category1": "1 - Simple",
+		"category2": "2 - Medium (configuration, portability)",
+		"category3": "3 - Complex",
+		"thLabel": "Th (person-days)",
+		"thHint": "For ~{{v3}} LOC, category {{category}}"
+	},
+	"correctionFactors": {
+		"stepTitle": "Step 3: Correction coefficients",
+		"kcLabel": "Kc - Complexity",
+		"kcHint": "Interactivity + DB + characteristics",
+		"ktLabel": "Kt - Typicality",
+		"ktHint": "Use of ready-made modules",
+		"khLabel": "Kh - Novelty",
+		"khHint": "Team experience"
+	},
+	"staffCount": {
+		"stepTitle": "Step 4: Required staff count",
+		"daysInYearLabel": "Days in a year",
+		"holidaysLabel": "Holidays",
+		"weekendsLabel": "Weekends",
+		"vacationLabel": "Vacation",
+		"effectiveFundLabel": "Effective time fund (Feff):",
+		"effectiveFundResult": "Feff = {{tk}} - {{ts}} - {{tv}} - {{to}} =",
+		"daysSuffix": "days",
+		"staffLabel": "Required staff count (N):",
+		"staffFormula": "Formula: N = T3 / (Feff × Tp)",
+		"staffStep": "N = {{t3}} / ({{tef}} × {{tp}}) ≈",
+		"peopleSuffix": "people",
+		"exactValue": "(Exact value: {{value}})"
+	},
+	"result": {
+		"title": "Total Effort",
+		"formula": "T3 = Th × Kc × Kt × Kh",
+		"result": "T3 ≈ {{t3}} person-days",
+		"step": "T3 = {{th}} × {{kc}} × {{kt}} × {{kh}}",
+		"statCodeVolume": "Code volume",
+		"statLabor": "Effort",
+		"unitPersonDays": "p-days",
+		"bannerTitle": "Staff count calculation result",
+		"bannerResult": "<1>{{count}}</1> specialists required",
+		"deadlineLabel": "Deadline",
+		"deadlineValue": "{{years}} year",
+		"deadlinePlanned": "(planned)"
+	}
+}

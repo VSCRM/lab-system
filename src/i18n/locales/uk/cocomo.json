@@ -1,0 +1,40 @@
+{
+	"scaleFactors": {
+		"prec": "PREC - Прецедентність",
+		"flex": "FLEX - Гнучкість процесу",
+		"resl": "RESL - Дозвіл ризиків",
+		"team": "TEAM - Спрацьованість команди",
+		"pmat": "PMAT - Зрілість процесів",
+		"sumFormula": "ΣSF = PREC + FLEX + RESL + TEAM + PMAT",
+		"sumResult": "E = {{value}}",
+		"sumStep": "ΣSF = {{sum}}"
+	},
+	"costDrivers": {
+		"formula": "EAF = добуток усіх драйверів",
+		"result": "EAF = {{value}}"
+	},
+	"staffTable": {
+		"roleHeader": "Роль",
+		"rateHeader": "З/П ($/міс)",
+		"shareHeader": "Участь (%)",
+		"actionsHeader": "Дії",
+		"caption": "Розподіл персоналу проекту за роллю, ставкою та часткою участі",
+		"roleNameSr": "Назва ролі",
+		"rateSr": "Ставка для ролі {{role}}",
+		"shareSr": "Частка участі для ролі {{role}}",
+		"removeRole": "Видалити роль {{role}}",
+		"addRole": "Додати роль",
+		"totalShare": "* Сума часток: {{value}}%",
+		"avgRate": "* Середня ставка: ${{value}}/міс",
+		"shareWarning": "Сума часток участі зараз дорівнює {{value}}%, очікується 100%."
+	},
+	"finalMetrics": {
+		"effort": "Трудомісткість",
+		"duration": "Тривалість",
+		"totalCost": "Загальна вартість",
+		"staffing": "Персонал (Staff)",
+		"unitPersonMonths": "PM",
+		"unitMonths": "міс.",
+		"unitPeople": "осіб"
+	}
+}

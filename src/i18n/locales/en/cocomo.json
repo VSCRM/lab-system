@@ -1,0 +1,40 @@
+{
+	"scaleFactors": {
+		"prec": "PREC - Precedentedness (project novelty)",
+		"flex": "FLEX - Development flexibility",
+		"resl": "RESL - Architecture/risk resolution",
+		"team": "TEAM - Team cohesion",
+		"pmat": "PMAT - Process maturity",
+		"sumFormula": "ΣSF = PREC + FLEX + RESL + TEAM + PMAT",
+		"sumResult": "E = {{value}}",
+		"sumStep": "ΣSF = {{sum}}"
+	},
+	"costDrivers": {
+		"formula": "EAF = product of all drivers",
+		"result": "EAF = {{value}}"
+	},
+	"staffTable": {
+		"roleHeader": "Role",
+		"rateHeader": "Rate ($/mo)",
+		"shareHeader": "Share (%)",
+		"actionsHeader": "Actions",
+		"caption": "Project staff allocation by role, rate, and share of effort",
+		"roleNameSr": "Role name",
+		"rateSr": "Rate for role {{role}}",
+		"shareSr": "Share of effort for role {{role}}",
+		"removeRole": "Remove role {{role}}",
+		"addRole": "Add role",
+		"totalShare": "* Total share: {{value}}%",
+		"avgRate": "* Average rate: ${{value}}/mo",
+		"shareWarning": "The total share currently equals {{value}}%, expected 100%."
+	},
+	"finalMetrics": {
+		"effort": "Effort",
+		"duration": "Duration",
+		"totalCost": "Total cost",
+		"staffing": "Staffing",
+		"unitPersonMonths": "PM",
+		"unitMonths": "mo.",
+		"unitPeople": "people"
+	}
+}

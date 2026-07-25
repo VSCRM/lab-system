@@ -1,0 +1,78 @@
+{
+	"header": {
+		"title": "Lab Exercise #6",
+		"subtitle": "Software component size estimation for an information system"
+	},
+	"initialRoles": {
+		"developer": "Developer",
+		"seniorDeveloper": "Senior Developer",
+		"analyst": "Analyst",
+		"manager": "Manager",
+		"tester": "QA Tester"
+	},
+	"volumeStep": {
+		"stepTitle": "Step 1: Code volume calculation (KSLOC)",
+		"designFormsLabel": "Number of forms with a design change",
+		"designPercentLabel": "Change percentage (0.0 - 1.0)",
+		"designPercentHint": "20% = 0.20",
+		"newFormsLabel": "Number of new forms (mockup)",
+		"avgModuleLabel": "Average module (SLOC)",
+		"slocDesignLine": "SLOC_design = {{forms}} × {{avgModule}} × {{percent}} = {{value}} SLOC",
+		"slocNewLine": "SLOC_new = {{forms}} × {{avgModule}} × 1.0 = {{value}} SLOC",
+		"totalSlocLine": "Total SLOC = {{slocDesign}} + {{slocNew}} =",
+		"ksloc": "KSLOC = {{value}}"
+	},
+	"modificationStep": {
+		"stepTitle": "Step 2: Modification percentages (Reuse Parameters)",
+		"slocpLabel": "SLOCP - Logic",
+		"slociLabel": "SLOCI - Processing",
+		"slocrLabel": "SLOCR - Integration",
+		"dmLine": "DM = (SLOCP / AvgModule) × 100 = {{value}}%",
+		"cmLine": "CM = (SLOCI / AvgModule) × 100 = {{value}}%",
+		"imLine": "IM = (SLOCR / AvgModule) × 100 = {{value}}%"
+	},
+	"eslocStep": {
+		"stepTitle": "Step 3: Equivalent volume (ESLOC)",
+		"aaLabel": "AA - Assessment (%)",
+		"suLabel": "SU - Code understanding (%)",
+		"formula": "ESLOC = AvgModule × (AA + SU + 0.4×DM + 0.3×CM + 0.3×IM) / 100",
+		"esloc": "ESLOC ≈ {{value}} SLOC (per form)",
+		"totalEsloc": "Total ESLOC = {{value}} KSLOC ({{forms}} forms)"
+	},
+	"volumeSummary": {
+		"stepTitle": "Steps 1-3 summary",
+		"totalVolume": "Total volume",
+		"equivalentVolume": "Equivalent volume",
+		"modification": "Modification",
+		"modificationLabels": "DM / CM / IM"
+	},
+	"effortStep": {
+		"stepTitle": "Step 6: Project effort",
+		"formula": "Effort = 2.94 × (ESLOC_total)^E × EAF × 0.45",
+		"result": "Effort ≈ {{value}} person-months"
+	},
+	"durationStep": {
+		"stepTitle": "Step 7: Project duration",
+		"formula": "TDEV = 3.67 × (Effort)^F, where F = 0.28 + 0.2 × (E - 0.91)",
+		"result": "Duration ≈ {{value}} months",
+		"step": "F = {{value}}"
+	},
+	"scaleFactorsSection": {
+		"stepTitle": "Step 4: Scale Factors"
+	},
+	"costDriversSection": {
+		"stepTitle": "Step 5: Cost Drivers (17 parameters)"
+	},
+	"staffSection": {
+		"stepTitle": "Step 8: Staff distribution"
+	},
+	"finalSection": {
+		"stepTitle": "Final metrics",
+		"summaryTitle": "✓ PROJECT SUMMARY DATA",
+		"summaryDesignForms": "• {{count}} forms (design change {{percent}}%)",
+		"summaryNewForms": "• {{count}} forms (new mockups 100%)",
+		"summaryAvgModule": "• Average module: {{value}} SLOC",
+		"summaryTotalVolume": "• Total volume: {{value}} KSLOC",
+		"summaryEquivalentVolume": "• Equivalent volume: {{value}} KSLOC"
+	}
+}

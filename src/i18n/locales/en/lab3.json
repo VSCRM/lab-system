@@ -1,0 +1,62 @@
+{
+	"header": {
+		"title": "Lab Exercise #3",
+		"subtitle": "Software system cost estimation using the COCOMO model"
+	},
+	"modeAndSize": {
+		"stepTitle": "Model level and development mode",
+		"modeLabel": "Model level",
+		"modeBasic": "Basic",
+		"modeDetailed": "Detailed",
+		"regimeLabel": "Development mode",
+		"regimeOrganic": "Organic",
+		"regimeSemidetached": "Semidetached",
+		"regimeEmbedded": "Embedded",
+		"sizeLabel": "Project size (KLOC)",
+		"coefficientsLabel": "Coefficients for the \"{{regime}}\" mode:"
+	},
+	"costDrivers": {
+		"stepTitle": "Cost Drivers",
+		"acapLabel": "ACAP - Analyst capability",
+		"acapHint": "High = 0.86",
+		"pcapLabel": "PCAP - Programmer capability",
+		"pcapHint": "Very high = 0.70",
+		"lexpLabel": "LEXP - Language experience",
+		"lexpHint": "High = 0.95",
+		"relyLabel": "RELY - Required reliability",
+		"relyHint": "Nominal = 1.00",
+		"dataLabel": "DATA - Database size",
+		"dataHint": "Nominal = 1.00",
+		"formula": "EAF = ACAP × PCAP × LEXP × RELY × DATA",
+		"result": "EAF = {{eaf}}",
+		"step": "EAF = {{acap}} × {{pcap}} × {{lexp}} × {{rely}} × {{data}}"
+	},
+	"basicMode": {
+		"stepTitle": "Basic-level calculation",
+		"effortFormula": "1. Effort (E) = a × (Size)^b",
+		"effortResult": "E ≈ {{value}} person-months",
+		"tdevFormula": "2. Development time (TDEV) = c × (E)^d",
+		"tdevResult": "TDEV ≈ {{value}} months",
+		"ssFormula": "3. Staff size (SS) = E / TDEV",
+		"ssResult": "SS ≈ {{value}} people",
+		"pFormula": "4. Productivity (P) = Size / E",
+		"pResult": "P ≈ {{value}} KLOC/person-month"
+	},
+	"detailedMode": {
+		"info": "The team's high qualification (EAF = {{eaf}}) {{direction}} effort compared to nominal figures.",
+		"directionDecreases": "decreases",
+		"directionIncreases": "increases"
+	},
+	"results": {
+		"title": "Results",
+		"resultLabel": "E ≈ {{value}} person-months",
+		"statEffort": "Effort",
+		"unitPersonMonths": "person-months",
+		"statDuration": "Development time",
+		"unitMonths": "months",
+		"statStaff": "Staff",
+		"unitPeople": "people",
+		"statProductivity": "Productivity",
+		"unitProductivity": "KLOC/pm"
+	}
+}
